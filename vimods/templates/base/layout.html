@@ -1,0 +1,47 @@
+
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta charset="utf-8">
+      <title>
+      {% block title %}
+    
+      {% endblock %}
+      </title>
+     
+    <link rel="stylesheet" href="/static/css/main-41b40d040c105261db203ccccf417229.css">
+      <link href="/static/css/font.css" rel="stylesheet" type="text/css">
+         </head>
+   <body data-type="popular" data-tag="all">
+      <div id="container">
+         {%block header%}
+	
+       
+         {%endblock%}
+
+         <div id="loading"><img src="/static/img/loading-d41d8cd98f00b204e9800998ecf8427e.gif" alt="loading"></div>
+         <section id="main">
+            <section id="right">
+	            {% block tags%}
+	               
+	            {%endblock%}
+	            {% block search %}
+	              
+                {% endblock %}
+              
+            </section>
+            	{% block main %}
+	            
+          		{% endblock %}
+         
+         </section>
+         	<footer>
+		{% block footer%}
+
+        {% endblock %}
+         </footer>
+      </div>
+      <script defer="" src="/static/js/jquery.min.js"></script>
+      <script defer="" src="/static/js/main-3ea63e591503a01616a9f8eec94fd093.js"></script>
+   </body>
+</html>

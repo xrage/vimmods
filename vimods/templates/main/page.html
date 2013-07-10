@@ -1,0 +1,47 @@
+{% extends "base/layout.html"%}
+      {% block title %}
+    	Home
+      {% endblock %}
+ 
+ {%block header%}
+	{% include "base/header.html" %}
+ {%endblock%}
+
+{% block tags%}
+	{% include "base/tags.html" %}               
+{%endblock%}
+
+{% block search %}
+	{% include "base/search.html" %} 	              
+{% endblock %}
+
+{% block main %}
+<section id="moduleInfo">
+   <div id="top">
+      <div class="owner"><a href="#"><img src="https://secure.gravatar.com/avatar/{{mod.gravatar}}?s=140&amp;d=retro"></a></div>
+      <h2><span class="id">{{mod.title}}</span><!-- <span class="v">1.4.0</span> --></h2>
+      <p class="desc">{{mod.description}}</p>
+   </div>
+   <div id="bottom">
+      <h3>usage </h3>
+      <p class="npm"><span class="shell">$ </span>vpm -i {{mod.title}}</p>
+      <h3>Links</h3>
+      <ul>
+         <li><a href="{{mod.base_url}}">Homepage</a></li>
+      </ul>
+      <h3 class="githubTitle">github</h3>
+      <section class="github">
+         		<p><iframe src="http://ghbtns.com/github-btn.html?user={{repo_user}}&amp;repo={{repo}}&amp;type=watch&amp;size=large&amp;count=true" allowtransparency="" frameborder="0" scrolling="0" width="170" height="30"></iframe></p>
+         		<p><iframe src="http://ghbtns.com/github-btn.html?user={{repo_user}}&amp;repo={{repo}}&amp;type=fork&amp;size=large&amp;count=true" allowtransparency="" frameborder="0" scrolling="0" width="170" height="30"></iframe></p>
+         <p><a href="{{mod.clone_url}}">{{mod.clone_url}}</a></p>
+      </section>
+      <h3 class="tags">tags</h3>
+      <ul class="tags">
+      {% for tag in mod.tag.all %}
+         <li class="tag"><a href="/tags/javascript">{{tag}}</a></li>
+      {%endfor%}
+      </ul>
+   </div>
+</section>
+
+ {% endblock %}

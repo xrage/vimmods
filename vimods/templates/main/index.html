@@ -1,0 +1,20 @@
+{% extends "base/layout.html"%}
+      {% block title %}
+    	Home
+      {% endblock %}
+ 
+ {%block header%}
+	{% include "base/header.html" %}
+ {%endblock%}
+
+{% block tags%}
+	{% include "base/tags.html" %}               
+{%endblock%}
+
+{% block search %}
+	{% include "base/search.html" %} 	              
+{% endblock %}
+
+{% block main %}
+	     {% include "main/modlist.html" %}         
+ {% endblock %}

@@ -1,0 +1,17 @@
+<section id="modules">
+    <ol>
+    {%for mod in modules %}
+      <li title="mocha: simple, flexible, fun test framework" href="/page/{{mod.id}}">
+         <h3 class="pos">
+            <div class="num">{{forloop.counter}}</div>
+            <!-- <div class="score">VimEra</div> -->
+         </h3>
+         <div class="module-info">
+            <h3>{{mod.title}}</h3>
+            <p>{{mod.description}}</p>
+         </div>
+         <div class="gravatar"><img src="https://secure.gravatar.com/avatar/{{mod.gravatar}}"></div>
+      </li>
+	{% endfor %}
+   </ol>
+</section>
